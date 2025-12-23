@@ -1,0 +1,25 @@
+{
+  "name": "fem-hackathon_typing-speed-test",
+  "version": "1.0.0",
+  "description": "![Design preview for the Typing Speed Test coding challenge](./preview.jpg)",
+  "homepage": "https://github.com/Brymmobaggins/FEM-Hackathon_Typing-speed-test#readme",
+  "bugs": {
+    "url": "https://github.com/Brymmobaggins/FEM-Hackathon_Typing-speed-test/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brymmobaggins/FEM-Hackathon_Typing-speed-test.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "npx @tailwindcss/cli -i ./src/input.css -o ./dist/styles.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
+  }
+}
