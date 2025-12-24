@@ -37,4 +37,7 @@ npm-debug.log*
 *.log
 *.pem
 .DS_Store
-Thumbs.db
+Thumbs.db 
+
+// personal
+what-i-did.md

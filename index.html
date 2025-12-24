@@ -6,18 +6,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="./dist/styles.css" />
   </head>
   <body>
-    <div class="bg-red-300">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo omnis
-      pariatur repellendus.
-    </div>
-    <div class="bg-amber-300">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, fugit.
-    </div>
-    <div class="
-    bg-pink-200">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione alias inventore atque provident amet.</div>
+    <header class="flex items-center justify-between">
+      <div>
+        <img src="/assets/images/logo-small.svg" alt="small logo" />
+      </div>
+      <div class="">
+        <img src="/assets/images/icon-personal-best.svg" alt="trophy" />
+        <p>Best:92 WPM</p>
+      </div>
+    </header>
+
+    <section>
+      <div class="flex items-center justify-between">
+        <div>WPM: 0</div>
+        <div>Accuracy: 100%</div>
+        <div>Time: 0:60</div>
+      </div>
+
+      <!-- dropdown for difficulties -->
+      <div class="dropdown-container flex justify-between">
+        <div class="dropdown">
+          <button class="border rounded py-2.5 px-5 text-base font-medium" type="button">Difficulty</button>
+          <div class="dropdown-content">
+            <label class="">
+              <input class="" type="radio" value="Hard" />
+              Hard
+            </label>
+
+            <label class="">
+              <input type="radio" value="Medium" /> Medium
+            </label>
+
+            <label class="">
+              <input type="radio" value="Easy" /> Easy
+            </label>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="border rounded py-2.5 px-5" type="button">Timer</button>
+          <div class="dropdown-content">
+            <label>
+              <input type="radio" value="Medium" /> Times(60s)
+            </label>
+
+            <label><input type="radio" value="Easy" /> Passage</label>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
