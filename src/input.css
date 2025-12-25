@@ -2,6 +2,14 @@
 
 @import "tailwindcss";
 
+@theme{
+--Neutral-900: hsl(0, 0%, 7%);
+--Neutral-800: hsl(0, 0%, 15%);
+--Neutral-500: hsl(240, 3%, 46%);
+--Neutral-400: hsl(240, 1%, 59%);
+--Neutral-0: hsl(0, 0%, 100%);
+}
+
 .dropdown {
   position: relative;
   display: inline-block;
@@ -24,10 +32,14 @@
   /* margin: 12px; */
   display: block;
   cursor: pointer;
-  /* border-bottom: 1px solid black;
-  border-top: 1px solid black; */
+  
   border-radius: 6px;
 }
 .dropdown-content input[type="radio"] {
   margin-right: 5px;
+}
+.dropdown button img {
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
 }
