@@ -1,6 +1,6 @@
 <!-- @format -->
 <!DOCTYPE html>
-<html lang="en" class="bg-neutral-950 text-neutral-50 font-sora">
+<html lang="en" class="bg-neutral-900 text-neutral-50 font-sora">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,17 +8,21 @@
     <link rel="stylesheet" href="./dist/styles.css" />
   </head>
 
-  
-  <body class="min-h-screen grid grid-rows-[auto_1fr] text-base">
+  <body class="min-h-screen grid grid-rows-[auto_1fr] text-base w-full">
     <header
-      class="flex items-center justify-between gap-3.5 py-2.5 px-3.5 w-full"
-    >
-      <div class="logo-box">
+      class="flex items-center justify-between gap-3.5 py-2.5 px-3.5 border border-red-200 max-w-full"
+    > 
+    <!-- small logo -->
+      <div class="logo-box md:hidden">
         <img
-          class="w-6 h-6"
+          class=""
           src="/assets/images/logo-small.svg"
           alt="small logo"
         />
+      </div>
+      <!-- large logo -->
+      <div class="hidden md:block">
+        <img class="" src="/assets/images/logo-large.svg" alt="large logo">
       </div>
 
       <div class="best-text flex items-center gap-2 pl-3.5">
@@ -36,8 +40,7 @@
 
     <!--  -->
     <main class="min-h-full flex flex-col">
-      
-      <section class="px-3.5">
+      <section class="px-3.5 max-w-125 mx-auto">
         <div class="stats-bar flex items-center justify-between w-full py-4">
           <div class="stats flex flex-col gap-1 min-w-20 text-center">
             <div class="label text-sm text-neutral-400">WPM:</div>
@@ -73,7 +76,6 @@
               />
             </button>
 
-            
             <div class="dropdown-content mt-2">
               <label class="flex items-center gap-2 py-1">
                 <input type="radio" name="difficulty" value="Hard" />
@@ -129,8 +131,7 @@
             The printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown
             printer took a galley of type and scrambled it to make a type
-            specimen book.
-            lorem300
+            specimen book. lorem300
           </p>
         </div>
 
