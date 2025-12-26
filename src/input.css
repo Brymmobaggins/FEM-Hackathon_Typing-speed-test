@@ -44,7 +44,7 @@
   display: none;
   min-width: 120px;
   z-index: 1;
-  background-color: #f1f1f1;
+  background-color: var(--Neutral-900);
 }
 .dropdown:hover .dropdown-content {
   display: block;
