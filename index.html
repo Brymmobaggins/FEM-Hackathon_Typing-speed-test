@@ -6,137 +6,209 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Typing Test</title>
     <link rel="stylesheet" href="./dist/styles.css" />
+    <script src="./js/script.js" defer></script>
   </head>
 
   <body class="min-h-screen grid grid-rows-[auto_1fr] text-base w-full">
-    <header
-      class="flex items-center justify-between gap-3.5 py-2.5 px-3.5 border border-red-200 max-w-full"
-    > 
-    <!-- small logo -->
-      <div class="logo-box md:hidden">
-        <img
-          class=""
-          src="/assets/images/logo-small.svg"
-          alt="small logo"
-        />
-      </div>
-      <!-- large logo -->
-      <div class="hidden md:block">
-        <img class="" src="/assets/images/logo-large.svg" alt="large logo">
-      </div>
+    <header class="border-b border-neutral-800">
+      <div
+        class="mx-auto w-full max-w-360 px-4 py-3 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img
+            class="w-6 h-6 md:hidden"
+            src="/assets/images/logo-small.svg"
+            alt="small logo"
+          />
+          <img
+            class="hidden md:block"
+            src="/assets/images/logo-large.svg"
+            alt="logo"
+          />
+        </div>
 
-      <div class="best-text flex items-center gap-2 pl-3.5">
-        <img
-          class="h-5.5 w-5.5"
-          src="/assets/images/icon-personal-best.svg"
-          alt="trophy"
-        />
-        <span class="text-neutral-400">
-          Best:
-          <strong class="font-medium text-neutral-50">92 WPM</strong>
-        </span>
+        <!-- Best score -->
+        <div class="flex items-center gap-2 text-sm text-neutral-400">
+          <img
+            src="/assets/images/icon-personal-best.svg"
+            class="w-4 h-4"
+            alt="trophy"
+          />
+          <span>
+            Best:
+            <strong class="text-neutral-50 font-medium">92 WPM</strong>
+          </span>
+        </div>
       </div>
     </header>
 
-    <!--  -->
+  
     <main class="min-h-full flex flex-col">
-      <section class="px-3.5 max-w-125 mx-auto">
-        <div class="stats-bar flex items-center justify-between w-full py-4">
-          <div class="stats flex flex-col gap-1 min-w-20 text-center">
-            <div class="label text-sm text-neutral-400">WPM:</div>
-            <div class="value text-2xl font-black text-neutral-0">0</div>
-          </div>
-          <div class="divider w-px h-11 bg-neutral-500"></div>
+      <section class="border-b border-neutral-800">
+        <div class="mx-auto w-full max-w-360 px-4 py-4">
+          <div class="flex items-center justify-between gap-6">
+            <!-- LEFT: Stats -->
+            <div class="flex items-center gap-6">
+              <div
+                class="flex flex-col items-center min-w-22.5 md:flex-row md:gap-2 md:min-w-0"
+              >
+                <span class="text-sm text-neutral-400">WPM:</span>
+                <span class="text-3xl font-black leading-none md:text-2xl"
+                  >0</span
+                >
+              </div>
 
-          <div class="stats flex flex-col gap-1 min-w-20 text-center">
-            <div class="label text-sm text-neutral-400">Accuracy:</div>
-            <div class="value text-2xl font-black">100%</div>
-          </div>
-          <div class="divider w-px h-11 bg-neutral-500"></div>
+              <span class="h-10 w-px bg-neutral-800 md:h-6"></span>
 
-          <div class="stats flex flex-col gap-1 min-w-20 text-center">
-            <div class="label text-sm text-neutral-400">Time:</div>
-            <div class="value text-2xl font-black">0:60</div>
-          </div>
-        </div>
+              <div
+                class="flex flex-col items-center min-w-22.5 md:flex-row md:gap-2 md:min-w-0"
+              >
+                <span class="text-sm text-neutral-400">Accuracy:</span>
+                <span class="text-3xl font-black leading-none md:text-2xl"
+                  >100%</span
+                >
+              </div>
 
-        <!-- dropdown for difficulties -->
-        <div class="dropdown-container flex justify-between gap-4 pb-4">
-          <!-- Difficulty dropdown -->
-          <div class="dropdown relative">
-            <button
-              class="bg-black flex items-center gap-2 border border-neutral-700 hover:cursor-pointer rounded py-2.5 px-5 text-base text-white font-medium"
-              type="button"
-            >
-              Difficulty
-              <img
-                src="/assets/images/icon-down-arrow.svg"
-                alt="Dropdown Arrow"
-                class="w-4 h-4"
-              />
-            </button>
+              <span class="h-10 w-px bg-neutral-800 md:h-6"></span>
 
-            <div class="dropdown-content mt-2">
-              <label class="flex items-center gap-2 py-1">
-                <input type="radio" name="difficulty" value="Hard" />
-                Hard
-              </label>
+              <div
+                class="flex flex-col items-center min-w-22.5 md:flex-row md:gap-2 md:min-w-0"
+              >
+                <span class="text-sm text-neutral-400">Time:</span>
+                <span class="text-3xl font-black leading-none md:text-2xl"
+                  >0:60</span
+                >
+              </div>
+            </div>
 
-              <label class="flex items-center gap-2 py-1">
-                <input type="radio" name="difficulty" value="Medium" />
-                Medium
-              </label>
+            <!-- RIGHT: Desktop Pills (md and up) -->
+            <div class="hidden md:flex items-center gap-6">
+              <!-- Difficulty pills -->
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-neutral-500">Difficulty:</span>
+                <div class="flex items-center gap-1">
+                  <button
+                    class="h-7 px-2.5 rounded border border-neutral-700 text-sm text-neutral-200 hover:border-neutral-500"
+                    type="button"
+                  >
+                    Easy
+                  </button>
+                  <button
+                    class="h-7 px-2.5 rounded border border-neutral-700 text-sm text-neutral-200 hover:border-neutral-500"
+                    type="button"
+                  >
+                    Medium
+                  </button>
+                  <!-- active -->
+                  <button
+                    class="h-7 px-2.5 rounded border border-blue-500 text-sm text-blue-400"
+                    type="button"
+                  >
+                    Hard
+                  </button>
+                </div>
+              </div>
 
-              <label class="flex items-center gap-2 py-1">
-                <input type="radio" name="difficulty" value="Easy" />
-                Easy
-              </label>
+              <!-- Mode pills -->
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-neutral-500">Mode:</span>
+                <div class="flex items-center gap-1">
+                  <!-- active -->
+                  <button
+                    class="h-7 px-2.5 rounded border border-blue-500 text-sm text-blue-400"
+                    type="button"
+                  >
+                    Timed (60s)
+                  </button>
+                  <button
+                    class="h-7 px-2.5 rounded border border-neutral-700 text-sm text-neutral-200 hover:border-neutral-500"
+                    type="button"
+                  >
+                    Passage
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Timer dropdown -->
-          <div class="dropdown relative">
-            <button
-              class="flex items-center gap-2 bg-black text-white font-medium border border-neutral-700 rounded hover:cursor-pointer py-2.5 px-5"
-              type="button"
-            >
-              Timer
-              <img
-                src="/assets/images/icon-down-arrow.svg"
-                alt="Dropdown Arrow"
-                class="w-4 h-4"
-              />
-            </button>
+          <!-- MOBILE: Dropdowns (below stats, md hidden) -->
+          <div class="mt-4 grid grid-cols-2 gap-3 md:hidden">
+            <!-- Difficulty -->
+            <div class="dropdown relative">
+              <button
+                type="button"
+                class="dropdown-btn w-full h-10 rounded-lg border border-neutral-700 bg-neutral-950 text-neutral-100 flex items-center justify-center gap-2"
+              >
+                Hard
+                <img
+                  src="/assets/images/icon-down-arrow.svg"
+                  class="w-4 h-4"
+                  alt=""
+                />
+              </button>
 
-            <div class="dropdown-content mt-2">
-              <label class="flex items-center gap-2 py-1">
-                <input type="radio" name="timer" value="Timed60" />
+              <div
+                class="dropdown-menu hidden absolute mt-2 w-full rounded-lg border border-neutral-800 bg-neutral-950 p-3 z-20"
+              >
+                <label class="flex items-center gap-2 py-1">
+                  <input type="radio" name="difficulty" value="Easy" /> Easy
+                </label>
+                <label class="flex items-center gap-2 py-1">
+                  <input type="radio" name="difficulty" value="Medium" /> Medium
+                </label>
+                <label class="flex items-center gap-2 py-1">
+                  <input type="radio" name="difficulty" value="Hard" /> Hard
+                </label>
+              </div>
+            </div>
+
+            <!-- Mode -->
+            <div class="dropdown relative">
+              <button
+                type="button"
+                class="dropdown-btn w-full h-10 rounded-lg border border-neutral-700 bg-neutral-900 text-neutral-100 flex items-center justify-center gap-2"
+              >
                 Timed (60s)
-              </label>
+                <img
+                  src="/assets/images/icon-down-arrow.svg"
+                  class="w-4 h-4"
+                  alt=""
+                />
+              </button>
 
-              <label class="flex items-center gap-2 py-1">
-                <input type="radio" name="timer" value="Passage" />
-                Passage
-              </label>
+              <div
+                class="dropdown-menu hidden absolute mt-2 w-full rounded-lg border border-neutral-800 bg-neutral-950 p-3 z-20"
+              >
+                <label class="flex items-center gap-2 py-1">
+                  <input type="radio" name="mode" value="Timed60" /> Timed (60s)
+                </label>
+                <label class="flex items-center gap-2 py-1">
+                  <input type="radio" name="mode" value="Passage" /> Passage
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- typing section fills remaining space under header + stats + dropdowns -->
-      <section class="relative flex-1 overflow-hidden">
+      <!-- typing section-->
+      <section class="relative flex-1 overflow-hidden mx-auto w-full max-w-360">
         <!-- blurred background text -->
-        <div class="p-6 blur-sm opacity-40 select-none">
+        <div class="p-6 blur-xs opacity-40 select-none">
           <p class="leading-7">
             The printing and typesetting industry. Lorem Ipsum has been the
             industry's standard dummy text ever since the 1500s, when an unknown
             printer took a galley of type and scrambled it to make a type
             specimen book. lorem300
+           oris consequuntur, itaque similique ratione pariatur? Est, corrupti minima earum cumque iure ducimus asperiores fugit odio, vel molestias deserunt similique deleniti tenetur debitis inventore. Voluptatem a, sed nisi voluptates nemo blanditiis natus veniam incidunt distinctio neque molestias enim sapiente. Perferendis, magnam deserunt? Impedit officiis esse perspiciatis aspernatur vitae ex qui earum voluptas eos commodi mollitia optio, error nemo repellendus? Soluta cupiditate obcaecati ipsam dicta, dolorem corporis atque. Natus, nemo quaerat?
           </p>
         </div>
 
         <!-- overlay -->
-        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-black/60">
+          
+        </div>
 
         <!-- centered CTA -->
         <div
